@@ -131,3 +131,68 @@
 // console.log(time.changeSeconds(30));
 // console.log(time.changeMinutes(30));
 // console.log(time.changeHours(22));
+
+
+
+
+// Максимум
+
+// Створи об'єкт, що описує звичайний дріб.
+// Створи об'єкт, який має методи роботи з дробом:
+// Складання 2-х об'єктів-дробів.
+// Віднімання 2-х об'єктів-дробів.
+// Множення 2-х об'єктів-дробів.
+// Ділення 2-х об'єктів-дробів.
+// Скорочення об'єкта-дробу.
+// (Тобі потрібно буде створити ще деякі методи не
+// зазначені в завданні, для отримання математично
+// правильної відповіді)
+
+// let fractionOne = {
+//     numerator: 3,
+//     denominator: 4
+// }
+
+// let fractionTwo = {
+//     numerator: 7,
+//     denominator: 4,
+
+//     sum: function () {
+//         let numberNu = this.numerator + fractionOne.numerator;
+//         let numberDe;
+//         if (this.denominator == fractionOne.denominator) {
+//             numberDe = this.denominator;
+//         } else numberDe = this.denominator + fractionOne.denominator;
+
+//        return `${numberNu} / ${numberDe}`;
+//     },
+
+//     sub: function () {
+
+//         let numberNu = this.numerator - fractionOne.numerator;
+//         let numberDe;
+//         if (this.denominator == fractionOne.denominator) {
+//             numberDe = this.denominator;
+//         } else numberDe = this.denominator + fractionOne.denominator;
+
+//        return `${numberNu} / ${numberDe}`;
+//     },
+
+//     multi: function () {
+//         let numberNu = this.numerator * fractionOne.numerator;
+//         let numberDe = this.denominator * fractionOne.denominator;
+//         return `${numberNu} / ${numberDe}`;
+//     },
+ 
+//      divide: function () {
+//          let numberNu = this.numerator * fractionOne.denominator;
+//          let numberDe = this.denominator * fractionOne.numerator;
+//          return `${numberNu} / ${numberDe}`;
+//      }
+
+// }
+
+// console.log(fractionTwo.sum());
+// console.log(fractionTwo.sub());
+// console.log(fractionTwo.multi());
+// console.log(fractionTwo.divide());
