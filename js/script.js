@@ -94,9 +94,9 @@
 // користувач може передати 150 секунд, або 75 хвилин.
 
 // let time = {
-//     hours: 23,
-//     minutes: 59,
-//     seconds: 59,
+//     hours: 0,
+//     minutes: 0,
+//     seconds: 0,
 
 //     timeIs: function () {
 //         return `Time: ${this.hours}:${this.minutes}:${this.seconds}`
@@ -104,14 +104,22 @@
 
 //     changeSeconds: function (plusSeconds) {
 //         if (plusSeconds) {
-//                 this.seconds = plusSeconds;
-//             }
+//                 this.seconds += plusSeconds;
+//                 if (this.seconds > 59) {
+//                     this.seconds = 59;
+//                     this.minutes = Math.floor(plusSeconds % 3600 / 60);
+//                 }
+//             } 
 //         return time.timeIs()
 //     },
 
 //     changeMinutes: function (plusMinutes) {
 //         if (plusMinutes) {
-//             this.minutes = plusMinutes;
+//             this.minutes += plusMinutes;
+//             if (this.minutes > 59) {
+//                 this.minutes = 59;
+//                 this.hours = Math.floor(plusMinutes % 3600 / 60);
+//             }
 //         }
 //         return time.timeIs()
 //     },
@@ -128,9 +136,9 @@
 
 
 // console.log(time.timeIs());
-// console.log(time.changeSeconds(30));
-// console.log(time.changeMinutes(30));
-// console.log(time.changeHours(22));
+// console.log(time.changeSeconds(59));
+// console.log(time.changeMinutes(59));
+// console.log(time.changeHours(23));
 
 
 
@@ -164,7 +172,7 @@
 //             numberDe = this.denominator;
 //         } else numberDe = this.denominator + fractionOne.denominator;
 
-//        return `${numberNu} / ${numberDe}`;
+//        return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
 //     },
 
 //     sub: function () {
@@ -175,19 +183,19 @@
 //             numberDe = this.denominator;
 //         } else numberDe = this.denominator + fractionOne.denominator;
 
-//        return `${numberNu} / ${numberDe}`;
+//        return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
 //     },
 
 //     multi: function () {
 //         let numberNu = this.numerator * fractionOne.numerator;
 //         let numberDe = this.denominator * fractionOne.denominator;
-//         return `${numberNu} / ${numberDe}`;
+//         return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
 //     },
  
 //      divide: function () {
-//          let numberNu = this.numerator * fractionOne.denominator;
-//          let numberDe = this.denominator * fractionOne.numerator;
-//          return `${numberNu} / ${numberDe}`;
+//         let numberNu = this.numerator * fractionOne.denominator;
+//         let numberDe = this.denominator * fractionOne.numerator;
+//         return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
 //      }
 
 // }
