@@ -13,68 +13,70 @@
 // необхідно робити перерву на 1 годину. 
 
 
-// let car = {
-//     producer: 'Volkswagen',
-//     model: 'Golf VII',
-//     year: 2019,
-//     speed: 100,
-//     fuelTank: 55,
-//     fuelConsumsion: '6 liters',
-//     driverOne: 'Anna',
-//     driverTwo: 'Oleg',
-//     newDriver: function (driver) {
-//         this.newDriver = driver;
-//     },
+let car = {
+    producer: 'Volkswagen',
+    model: 'Golf VII',
+    year: 2019,
+    speed: 100,
+    fuelTank: 55,
+    fuelConsumsion: '6 liters',
+    driverOne: 'Anna',
+    driverTwo: 'Oleg',
+    newDriver: function (driver) {
+        this.newDriver = driver;
+    },
 
-//     checkDriver: function (name) {
-//         if (name === this.driverOne || name === this.driverTwo || name ===  this.newDriver) {
-//             return 'Водій існує!';
-//         } else return 'Немає в базі такого водія!';
-//     },
+    checkDriver: function (name) {
+        if (name === this.driverOne || name === this.driverTwo || name ===  this.newDriver) {
+            return 'Водій існує!';
+        } else return 'Немає в базі такого водія!';
+    },
 
-//     checkTrip: function (distance) {
-//         let time;
-//         let fuel;
-//        if(distance) {
-//             time = distance / this.speed;
-//             fuel = (distance / 100) * 6;
-//             if(time % 4 === 0) {
-//                 time = time + 1;
-//             }
-//        } else return 0;
+    checkTrip: function (distance) {
+        let time;
+        let fuel;
+       if(distance) {
+            time = distance / this.speed;
+            fuel = (distance / 100) * 6;
+            if(time % 4 === 0) {
+                time = time + 1;
+            }
+       } else return 0;
 
-//        return `Необхідний час: ${time} год. і палива: ${fuel} літрів.`;
-//     }
-// };
-// ////
-// car.carInform = function() {
-//     return `${car.producer} ${car.model},
-//     ${car.year}, avarage speed: ${car.speed},
-//     fuel tank volume: ${car.fuelTank},
-//     consumption per 100 kilometers: ${car.fuelConsumsion}`
-// };
+       return `Необхідний час: ${time} год. і палива: ${fuel} літрів.`;
+    }
+};
+
+////
+
+car.carInform = function() {
+    return `${car.producer} ${car.model},
+    ${car.year}, avarage speed: ${car.speed},
+    fuel tank volume: ${car.fuelTank},
+    consumption per 100 kilometers: ${car.fuelConsumsion}`
+};
   
-// console.log(car.carInform());
+console.log(car.carInform());
 
-// /////
+/////
 
-// car.newDriver('Vova');
-// console.log(car.newDriver);
+car.newDriver('Vova');
+console.log(car.newDriver);
 
-// ////
+////
 
-// console.log(car.checkDriver('Anna'));
-// console.log(car.checkDriver('Piter'));
-// console.log(car.checkDriver('Potter'));
+console.log(car.checkDriver('Anna'));
+console.log(car.checkDriver('Piter'));
+console.log(car.checkDriver('Potter'));
 
-// ///
+///
 
-// console.log(car.checkTrip(400));
-// console.log(car.checkTrip(500));
-// console.log(car.checkTrip(600));
-// console.log(car.checkTrip(800));
-// console.log(car.checkTrip(1000));
-// console.log(car.checkTrip(1200));
+console.log(car.checkTrip(400));
+console.log(car.checkTrip(500));
+console.log(car.checkTrip(600));
+console.log(car.checkTrip(800));
+console.log(car.checkTrip(1000));
+console.log(car.checkTrip(1200));
 
 
 
@@ -93,52 +95,52 @@
 // Також потрібно передбачити можливість того що
 // користувач може передати 150 секунд, або 75 хвилин.
 
-// let time = {
-//     hours: 0,
-//     minutes: 0,
-//     seconds: 0,
+let time = {
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
 
-//     timeIs: function () {
-//         return `Time: ${this.hours}:${this.minutes}:${this.seconds}`
-//     },
+    timeIs: function () {
+        return `Time: ${this.hours}:${this.minutes}:${this.seconds}`
+    },
 
-//     changeSeconds: function (plusSeconds) {
-//         if (plusSeconds) {
-//                 this.seconds += plusSeconds;
-//                 if (this.seconds > 59) {
-//                     this.seconds = 59;
-//                     this.minutes = Math.floor(plusSeconds % 3600 / 60);
-//                 }
-//             } 
-//         return time.timeIs()
-//     },
+    changeSeconds: function (plusSeconds) {
+        if (plusSeconds) {
+                this.seconds += plusSeconds;
+                if (this.seconds > 59) {
+                    this.seconds = 59;
+                    this.minutes = Math.floor(plusSeconds % 3600 / 60);
+                }
+            } 
+        return time.timeIs()
+    },
 
-//     changeMinutes: function (plusMinutes) {
-//         if (plusMinutes) {
-//             this.minutes += plusMinutes;
-//             if (this.minutes > 59) {
-//                 this.minutes = 59;
-//                 this.hours = Math.floor(plusMinutes % 3600 / 60);
-//             }
-//         }
-//         return time.timeIs()
-//     },
+    changeMinutes: function (plusMinutes) {
+        if (plusMinutes) {
+            this.minutes += plusMinutes;
+            if (this.minutes > 59) {
+                this.minutes = 59;
+                this.hours = Math.floor(plusMinutes % 3600 / 60);
+            }
+        }
+        return time.timeIs()
+    },
 
-//     changeHours: function (plusHours) {
-//         if (plusHours > 23) {
-//             return `Невірні дані`
-//         }
-//         this.hours = plusHours;
-//         return time.timeIs()
-//     }
+    changeHours: function (plusHours) {
+        if (plusHours > 23) {
+            return `Невірні дані`
+        }
+        this.hours = plusHours;
+        return time.timeIs()
+    }
 
-// }
+}
 
 
-// console.log(time.timeIs());
-// console.log(time.changeSeconds(59));
-// console.log(time.changeMinutes(59));
-// console.log(time.changeHours(23));
+console.log(time.timeIs());
+console.log(time.changeSeconds(59));
+console.log(time.changeMinutes(59));
+console.log(time.changeHours(23));
 
 
 
@@ -156,51 +158,51 @@
 // зазначені в завданні, для отримання математично
 // правильної відповіді)
 
-// let fractionOne = {
-//     numerator: 3,
-//     denominator: 4
-// }
+let fractionOne = {
+    numerator: 3,
+    denominator: 4
+}
 
-// let fractionTwo = {
-//     numerator: 7,
-//     denominator: 4,
+let fractionTwo = {
+    numerator: 7,
+    denominator: 4,
 
-//     sum: function () {
-//         let numberNu = this.numerator + fractionOne.numerator;
-//         let numberDe;
-//         if (this.denominator == fractionOne.denominator) {
-//             numberDe = this.denominator;
-//         } else numberDe = this.denominator + fractionOne.denominator;
+    sum: function () {
+        let numberNu = this.numerator + fractionOne.numerator;
+        let numberDe;
+        if (this.denominator == fractionOne.denominator) {
+            numberDe = this.denominator;
+        } else numberDe = this.denominator + fractionOne.denominator;
 
-//        return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
-//     },
+       return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
+    },
 
-//     sub: function () {
+    sub: function () {
 
-//         let numberNu = this.numerator - fractionOne.numerator;
-//         let numberDe;
-//         if (this.denominator == fractionOne.denominator) {
-//             numberDe = this.denominator;
-//         } else numberDe = this.denominator + fractionOne.denominator;
+        let numberNu = this.numerator - fractionOne.numerator;
+        let numberDe;
+        if (this.denominator == fractionOne.denominator) {
+            numberDe = this.denominator;
+        } else numberDe = this.denominator + fractionOne.denominator;
 
-//        return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
-//     },
+       return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
+    },
 
-//     multi: function () {
-//         let numberNu = this.numerator * fractionOne.numerator;
-//         let numberDe = this.denominator * fractionOne.denominator;
-//         return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
-//     },
+    multi: function () {
+        let numberNu = this.numerator * fractionOne.numerator;
+        let numberDe = this.denominator * fractionOne.denominator;
+        return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
+    },
  
-//      divide: function () {
-//         let numberNu = this.numerator * fractionOne.denominator;
-//         let numberDe = this.denominator * fractionOne.numerator;
-//         return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
-//      }
+     divide: function () {
+        let numberNu = this.numerator * fractionOne.denominator;
+        let numberDe = this.denominator * fractionOne.numerator;
+        return `${numberNu} / ${numberDe} = ${(numberNu / numberDe).toFixed(1)}`;
+     }
 
-// }
+}
 
-// console.log(fractionTwo.sum());
-// console.log(fractionTwo.sub());
-// console.log(fractionTwo.multi());
-// console.log(fractionTwo.divide());
+console.log(fractionTwo.sum());
+console.log(fractionTwo.sub());
+console.log(fractionTwo.multi());
+console.log(fractionTwo.divide());
